@@ -6,14 +6,6 @@ terraform {
       version = "~> 3.27"
     }
   }
-
-  backend "s3" {
-    bucket         = "myworkshop-terraform-state"
-    dynamodb_table = "myworkshop-terraform-state-locks"
-    key            = "terraform-aws-eks-workshop.tfstate"
-    region         = "ap-south-1"
-    encrypt        = true
-  }
 }
 
 provider "aws" {
@@ -23,7 +15,8 @@ provider "aws" {
   default_tags {
     tags = {
       Environment       = "Test"
-      Project           = "EKS-Workshop"
+      Project           = "Workshop"
+      Terraform         = "true"
     }
   }
 }
