@@ -14,21 +14,21 @@ variable "project" {
   description = "AWS Zone"
 }
 
-variable "eks_nodes_id" {
+variable "aws_eks_cluster_name" {
   type = string
-  description = "EKS node id"
+  description = "AWS Zone"
 }
-
 
 variable "vpc_id" {
   type = string
   description = "EKS node id"
 }
 
-variable "private_subnets" {
-  type = list(string)
+variable "aws_eks_cluster_id" {
+  type = string
+  description = "EKS node id"
 }
 
-variable "public_subnets" {
+variable "private_subnets" {
   type = list(string)
 }

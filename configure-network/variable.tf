@@ -9,26 +9,22 @@ variable "tags" {
   default     = {}
 }
 
+variable "vpc_cidr" {
+  type = string
+  description = "AWS Zone"
+}
+
 variable "project" {
   type = string
   description = "AWS Zone"
 }
 
-variable "eks_nodes_id" {
+variable "availability_zones_count" {
   type = string
-  description = "EKS node id"
+  description = "AWS Zone"
 }
 
-
-variable "vpc_id" {
+variable "subnet_cidr_bits" {
   type = string
-  description = "EKS node id"
-}
-
-variable "private_subnets" {
-  type = list(string)
-}
-
-variable "public_subnets" {
-  type = list(string)
+  description = "AWS Zone"
 }
