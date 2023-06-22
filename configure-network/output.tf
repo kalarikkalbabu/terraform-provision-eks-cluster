@@ -1,7 +1,3 @@
-output "eks_nodes_id" {
-  value = aws_security_group.eks_nodes.id
-}
-
 output "vpc_id" {
   value = aws_vpc.this.id
 }

@@ -17,7 +17,7 @@ module "provision-eks" {
   vpc_id = module.configure-network.vpc_id
   private_subnets = module.configure-network.private_subnets
   public_subnets = module.configure-network.public_subnets
-  depends_on = [module.configure-worker-nodes, module.configure-network, module.configure-network]
+  depends_on = [module.configure-network]
 
 }
 
@@ -30,5 +30,5 @@ module "configure-worker-nodes" {
   aws_eks_cluster_id = module.provision-eks.aws_eks_cluster_id
   aws_eks_cluster_name = module.provision-eks.aws_eks_cluster_name
   private_subnets = module.configure-network.private_subnets
-  depends_on = [module.provision-eks, module.configure-network, module.configure-network]
+  depends_on = [module.configure-network]
 }
