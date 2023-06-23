@@ -1,7 +1,7 @@
 # Terraform - provision eks cluster
 
 ## Terraform learn
-<img alt="Terraform" src="https://www.datocms-assets.com/2885/1629941242-logo-terraform-main.svg" width="600px">
+<img alt="Terraform" src="eks-provision.png" width="600px">
 
 - Terraform: https://www.terraform.io
 - Documentation: [https://www.terraform.io/docs/](https://www.terraform.io/docs/)
@@ -104,7 +104,38 @@ terraform destroy
 
 After creating state store, go back to root and execute same terraform commands as above
 
-*More module details will be updated in each modules soon*
+The main tf contains the remaining three modules, configure-network, configure-worker-nodes, provision-eks.
+
+
+###configure-network
+
+This module responsible for creating :
+
+- AWS VPC (Virtual Private Cloud).
+- Public and private Subnets
+- Internet Gateway for services to access internet with VPC (from Public subnets).
+- NAT Gateway in public subnets for private subnet services to connect internet
+- Routing Tables
+- Security Groups
+
+
+###configure-worker-nodes
+
+This module responsible for:
+
+- creating node groups ,ASG etc
+- IAM roles and policies for nodes
+- Attach required AWS managed policies for nodes
+
+
+###provision-eks
+
+This module responsible for:
+
+- Provision EKS
+- IAM roles and policies for cluster
+- SG roles
+- Attach required AWS managed policies for nodes
 
 
 
