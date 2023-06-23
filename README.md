@@ -28,9 +28,11 @@ The key features of Terraform are:
 
 This repository explains how terraform provisions EKS cluster with all required AWS resources . For better understanding I used modularised terraform architecture.
 
-<img alt="Terraform" src="eks-provision.png" width="800px" height="450px">
-
 ## Getting Started & Documentation
+
+### Architecture
+
+<img alt="Terraform" src="eks-provision.png" width="800px" height="450px">
 
 ### Connecting to AWS
 
