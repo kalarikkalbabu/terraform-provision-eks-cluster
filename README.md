@@ -1,7 +1,6 @@
 # Terraform - provision eks cluster
 
 ## Terraform learn
-<img alt="Terraform" src="eks-provision.png" width="600px">
 
 - Terraform: https://www.terraform.io
 - Documentation: [https://www.terraform.io/docs/](https://www.terraform.io/docs/)
@@ -28,6 +27,8 @@ The key features of Terraform are:
 - **Change Automation**
 
 This repository explains how terraform provisions EKS cluster with all required AWS resources . For better understanding I used modularised terraform architecture.
+
+<img alt="Terraform" src="eks-provision.png" width="800px" height="600px">
 
 ## Getting Started & Documentation
 
