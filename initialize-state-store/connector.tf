@@ -15,7 +15,7 @@ provider "aws" {
   default_tags {
     tags = {
       Environment       = "Test"
-      Project           = "Workshop"
+      Project           = "EKS-Workshop"
       Terraform         = "true"
     }
   }

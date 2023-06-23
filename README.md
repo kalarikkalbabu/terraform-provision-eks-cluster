@@ -1,9 +1,10 @@
 # Terraform - provision eks cluster
 
-## Terraform learn
+<img alt="Terraform" src="https://www.datocms-assets.com/2885/1629941242-logo-terraform-main.svg" width="600px"> ## Terraform learn
 - Terraform: https://www.terraform.io
 - Documentation: [https://www.terraform.io/docs/](https://www.terraform.io/docs/)
 - Tutorials: [HashiCorp's Learn Platform](https://learn.hashicorp.com/terraform)
+
 
 ## Kubernetes learn
 - Kubernetes: https://kubernetes.io/
@@ -14,8 +15,6 @@
 - Kubernetes: https://aws.amazon.com/eks/
 - Documentation: [Amazon Elastic Kubernetes Service Documentation](https://docs.aws.amazon.com/eks/?icmpid=docs_homepage_containers)
 - Tutorials: [Getting started with Amazon EKS](https://aws.amazon.com/eks/getting-started/)
-
-<img alt="Terraform" src="https://www.datocms-assets.com/2885/1629941242-logo-terraform-main.svg" width="600px">
 
 Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions.
 
@@ -103,7 +102,7 @@ terraform destroy
 
 After creating state store, go back to root and execute same terraform commands as above
 
-* More module details will be updated in each modules soon *
+*More module details will be updated in each modules soon*
 
 
 

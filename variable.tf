@@ -10,7 +10,7 @@ variable "tags" {
   default = {
     Terraform   = "true"
     Environment = "Test"
-    Project     = "Workshop"
+    Project     = "EKS-Workshop"
   }
 }
 
@@ -29,7 +29,7 @@ variable "subnet_cidr_bits" {
 variable "project" {
   type = string
   description = "Project Name"
-  default = "Workshop"
+  default = "EKS-Workshop"
 }
 
 variable "availability_zones_count" {
