@@ -28,7 +28,7 @@ The key features of Terraform are:
 
 This repository explains how terraform provisions EKS cluster with all required AWS resources . For better understanding I used modularised terraform architecture.
 
-<img alt="Terraform" src="eks-provision.png" width="800px" height="600px">
+<img alt="Terraform" src="eks-provision.png" width="800px" height="450px">
 
 ## Getting Started & Documentation
 
@@ -108,7 +108,7 @@ After creating state store, go back to root and execute same terraform commands 
 The main tf contains the remaining three modules, configure-network, configure-worker-nodes, provision-eks.
 
 
-###configure-network
+### Configure-network
 
 This module responsible for creating :
 
@@ -120,7 +120,7 @@ This module responsible for creating :
 - Security Groups
 
 
-###configure-worker-nodes
+### Configure-worker-nodes
 
 This module responsible for:
 
@@ -129,7 +129,7 @@ This module responsible for:
 - Attach required AWS managed policies for nodes
 
 
-###provision-eks
+### Provision-eks
 
 This module responsible for:
 
