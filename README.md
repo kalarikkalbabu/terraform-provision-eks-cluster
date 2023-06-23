@@ -26,7 +26,7 @@ The key features of Terraform are:
 - **Resource Graph**
 - **Change Automation**
 
-This repository explains how terraform provisions EKS cluster with all required AWS resources . For better understandability I used modularised terraform architecture.
+This repository explains how terraform provisions EKS cluster with all required AWS resources . For better understanding I used modularised terraform architecture.
 
 ## Getting Started & Documentation
 
