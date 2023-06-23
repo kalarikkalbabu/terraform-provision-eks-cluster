@@ -2,6 +2,7 @@
 
 ## Terraform learn
 <img alt="Terraform" src="https://www.datocms-assets.com/2885/1629941242-logo-terraform-main.svg" width="600px">
+
 - Terraform: https://www.terraform.io
 - Documentation: [https://www.terraform.io/docs/](https://www.terraform.io/docs/)
 - Tutorials: [HashiCorp's Learn Platform](https://learn.hashicorp.com/terraform)
