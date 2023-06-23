@@ -30,21 +30,82 @@ This repository explains how terraform provisions EKS cluster with all required 
 
 ## Getting Started & Documentation
 
-There is four terraform modules used, they are:
+### Connecting to AWS
+
+Create AWS *Access Key* and *Secret Access Key* for your IAM user and download the credential file
+
+Add the credentials (*Access Key* and *Secret Access Key*) in terraform module. We can give in different way , in a secure manner here it is directly fetching from the credentials file which is created upon AWS configure
+
+Use your terminal console to connect aws using above credentials
+
+```
+$ aws configure
+AWS Access Key ID [None]: **********
+AWS Secret Access Key [None]: **********
+Default region name [None]: ap-south-1
+Default output format [None]:
+```
+Now the credential will be stored in  *~/.aws/credentials* . Use this file in your terraform module as below
+
+```
+provider "aws" {
+  shared_credentials_file = "~/.aws/credentials"
+  .........
+}
+```
+
+### Modules
+
+The entire configuration is split into 4 modules.
 
 - **initialize-state-store**
 - **configure-network**
 - **configure-worker-nodes**
 - **provision-eks**
 
-## initialize-state-store
+### initialize-state-store
 
-This module used to create terraform state store. It creates
+Terraform is stateful and by default it stores the state information's in the local directory as tfstate file (terraform.tfstate). If by mistake we delete the state file we will lose all the information and won't be able to update /destroy the resources . So we are using a permanent state file stored in the S3 bucket in our AWS account.
+
+This module creates terraform state store in our AWS account. It contains
 
 - An S3 bucket to store terraform state files
 - A DynamoDB table for state lock.
 
-This module has to be provisioned before starting rest of terraform execution.
+This module has to be executed before running rest of terraform modules. Because it creates backend TF state store and which will be used for rest of terraform state transitions.
+
 
 For executing this, please follow below steps.
+
+```
+git clone  https://github.com/kalarikkalbabu/terraform-provision-eks-cluster.git
+
+cd terraform-provision-eks-cluster/initialize-state-store
+```
+
+Terraform execution
+ ```
+terraform init # this is where you initialize terraform modules and dependencies
+
+terraform plan # this is where you review changes and choose whether to simply accept them.
+
+terraform validate # this is where you validate your code against syntax and formats
+
+terraform apply # this is where you accept changes and apply them against real infrastructure.
+
+after all if you want to delete the resource run
+
+terraform destroy
+
+```
+
+### Main terraform execution
+
+After creating state store, go back to root and execute same terraform commands as above
+
+* More module details will be updated in each modules soon *
+
+
+
+
 

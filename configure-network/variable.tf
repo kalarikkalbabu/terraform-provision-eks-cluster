@@ -1,6 +1,6 @@
 variable "region" {
   type = string
-  description = "AWS Zone"
+  description = "AWS region"
 }
 
 variable "tags" {
@@ -11,20 +11,20 @@ variable "tags" {
 
 variable "vpc_cidr" {
   type = string
-  description = "AWS Zone"
+  description = "CIDR Block"
 }
 
 variable "project" {
   type = string
-  description = "AWS Zone"
+  description = "Project Name"
 }
 
 variable "availability_zones_count" {
   type = string
-  description = "AWS Zone"
+  description = "Availability zones"
 }
 
 variable "subnet_cidr_bits" {
   type = string
-  description = "AWS Zone"
+  description = "additional cidr bits"
 }

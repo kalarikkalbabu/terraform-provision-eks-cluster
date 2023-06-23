@@ -1,6 +1,6 @@
 variable "region" {
   type = string
-  description = "AWS Zone"
+  description = "AWS Region"
 }
 
 variable "tags" {
@@ -11,24 +11,25 @@ variable "tags" {
 
 variable "project" {
   type = string
-  description = "AWS Zone"
+  description = "Project name"
 }
 
 variable "aws_eks_cluster_name" {
   type = string
-  description = "AWS Zone"
+  description = "EKS cluster name"
 }
 
 variable "vpc_id" {
   type = string
-  description = "EKS node id"
+  description = "VPC id"
 }
 
 variable "aws_eks_cluster_id" {
   type = string
-  description = "EKS node id"
+  description = "EKS cluster id"
 }
 
 variable "private_subnets" {
   type = list(string)
+  description = "Private Subnets in different availability zones"
 }

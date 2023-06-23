@@ -1,3 +1,4 @@
+# Module to configure vpc,subnet, IGW, NAT and security groups
 module "configure-network" {
   source = "./configure-network"
   region = var.region
@@ -8,6 +9,7 @@ module "configure-network" {
   availability_zones_count = var.availability_zones_count
 }
 
+# Module to create EKS, this module has dependenccy with configure-network module and uses output data from it
 module "provision-eks" {
   source = "./provision-eks"
   region = var.region
@@ -21,6 +23,7 @@ module "provision-eks" {
 
 }
 
+# Module to create Worker nodes in EKS, this module has dependenccy with configure-network module and uses output data from it
 module "configure-worker-nodes" {
   source = "./configure-worker-nodes"
   region = var.region

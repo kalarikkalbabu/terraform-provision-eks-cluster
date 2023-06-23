@@ -28,7 +28,7 @@ variable "subnet_cidr_bits" {
 
 variable "project" {
   type = string
-  description = "AWS Zone"
+  description = "Project Name"
   default = "Workshop"
 }
 
